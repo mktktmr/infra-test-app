@@ -17,8 +17,6 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
-gem 'unicorn'
-
 gem 'devise'
 
 gem 'carrierwave', '~> 1.0'
@@ -28,6 +26,10 @@ gem 'fog-aws'
 gem 'dotenv-rails'
 
 gem 'dalli-elasticache'
+
+group :production do
+  gem 'unicorn'
+end
 
 group :development, :test do
   gem 'byebug', platform: :mri
